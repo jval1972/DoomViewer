@@ -6700,8 +6700,8 @@ begin
     PS := @inf.Sectors[0];
     for i := 0 to numSectors - 1 do
     begin
-      PS.floorh := pds.floorh  * cView_div_Factor;
-      PS.ceilh := pds.ceilh  * cView_div_Factor;
+      PS.floorh := pds.floorh * cView_div_Factor;
+      PS.ceilh := pds.ceilh * cView_div_Factor;
       PS.floorC := GetSectorColor(pds.light, lFactor);
       PS.ceilC := PS.floorC;
       PS.AbsoluteFlat := True;
