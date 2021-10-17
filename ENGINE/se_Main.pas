@@ -21252,6 +21252,19 @@ begin
         inc(pDIRi);
       until (pDIRi = pDIRiEnd) or found;
       found := False;
+    end
+    else
+    begin
+      pDIRi := @DIR[0];
+      pDIRiEnd := @DIR[count];
+      repeat
+        if pDIRi.Size > 0 then
+        begin
+          WALLSDIR[numWalls] := pDIRi^;
+          inc(numWalls);
+        end;
+        inc(pDIRi);
+      until pDIRi = pDIRiEnd;
     end;
     QuickSortDoomDirectory(WALLSDIR, numWalls);
 
@@ -22029,7 +22042,7 @@ begin
     i := 0;
     repeat
       s := DoomEntryName(DIR[i].Name);
-      if (s =  rsTexture1) or (s =  rsTexture2) or (s =  rsTexture3) then
+      if (s = rsTexture1) or (s = rsTexture2) or (s = rsTexture3) then
         AddTextureInfoInList(i);
       inc(i);
     until i = count;
