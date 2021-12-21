@@ -9,7 +9,7 @@ const
 
 const
   TICRATE = 35;
-    
+
 const
   MAXTEXANIMS = 8;
 
@@ -23,7 +23,7 @@ type
 
   PTextureAnimTable = ^TTextureAnimTable;
   TTextureAnimTable = array[0..$FF] of TTextureAnim;
-  
+
 
 type
 // LookUp table

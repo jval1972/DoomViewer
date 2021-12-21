@@ -15,7 +15,7 @@ const
   MEDIASUBTYPE_VOXWARE      : TGUID = '{00000075-0000-0010-8000-00AA00389B71}'; // VoxWare MetaSound
   IID_IPersistStream        : TGUID = '{00000109-0000-0000-C000-000000000046}';
   IID_IMoniker              : TGUID = '{0000000F-0000-0000-C000-000000000046}';
-  
+
 type
   TOverlayColor = record
     case integer of
@@ -139,7 +139,7 @@ type
 
   function PersistToHex(obj: IPersistStream): string;
   function HexToPersist(str: String; GUID: TGUID): IPersistStream;
-  
+
 implementation
 
   function  FileToPath(FileName: string): TFilePath;

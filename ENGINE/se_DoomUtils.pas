@@ -859,7 +859,7 @@ begin
 end;
 
 function IsValidTextureName(ts: string): boolean; overload;
-// Returns True if <tn> is a valid texture name 
+// Returns True if <tn> is a valid texture name
 begin
   Result := (ts <> '') and (ts <> '-')
 end;
@@ -3702,7 +3702,7 @@ begin
 
   if start < 0 then
     start := 0;
-    
+
   for i := start to numEntries - 1 do
     if DoomEntryNamesEqual(Entry2, dir[i].Name) then
 //    if {UpperCase}(DoomEntryName(dir[i])) = Entry then

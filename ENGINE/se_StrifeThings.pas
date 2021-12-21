@@ -2269,7 +2269,7 @@ type
   S_BNG2_7,
   S_BNG2_8,
   S_BNG2_9,
-  
+
   //Oracle
   S_ORACLE_1,
   S_ORACLE_2,
@@ -3678,7 +3678,7 @@ implementation
 
 uses
   se_Main;
-  
+
 var
   PositiveStart: integer;
 
@@ -17797,7 +17797,7 @@ begin
     0, //MF_SOLID|MF_SHOOTABLE|MF_COUNTKILL, // flags
     ord(S_DOGS_RAISE1) // raisestate
   );
-//    #define  
+//    #define
 
   mobjinfo[446] := MakeObjInfo(   ////// MT_STEALTHBABY (ARACHNOTRON)
     STEALTH_EDNUM_BASE,   // doomednum

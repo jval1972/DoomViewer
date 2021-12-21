@@ -131,7 +131,7 @@ Abstract   :    Definitions for NetShow events.
 //
 
 const
-  FACILITY_NS_WIN32 = $7; 
+  FACILITY_NS_WIN32 = $7;
   FACILITY_NS = $D;
 
 ///
@@ -398,7 +398,7 @@ const
   NS_E_WALKER_USAGE = $C00D004E;
 
 
-///////////////////////////////////////////////////////////////////////// 
+/////////////////////////////////////////////////////////////////////////
 //
 // NETSHOW Monitor Events
 //
@@ -545,7 +545,7 @@ const
 // Not receiving data from the server.%0 }
   NS_E_NO_MULTICAST = $C00D07F2;
 
-///////////////////////////////////////////////////////////////////////// 
+/////////////////////////////////////////////////////////////////////////
 //
 // NETSHOW Error Events
 //
@@ -605,7 +605,7 @@ const
   NS_E_NO_CHANNELS = $C00D00D8;
 
 /////////////////////////////////////////////////////////////////////
-// This error message is to replace previous NS_E_INVALID_INDEX which 
+// This error message is to replace previous NS_E_INVALID_INDEX which
 // takes an index value for the error message string.  For some application
 // obtain the idex value at reporting error time is very difficult, so we
 // use this string to avoid the problem.
@@ -680,7 +680,7 @@ const
 //
 // See ASFErr.mc for more details - please do not define any symbols
 // in that range in this file.
-// 
+//
 
 /////////////////////////////////////////////////////////////////////////
 //
@@ -1008,7 +1008,7 @@ const
 // Successfully loaded a JPG file.%0 }
   NS_S_WMP_LOADED_JPG_IMAGE = $000D1043;
 
-// 
+//
 // WMP WM Runtime Error codes
 //
 
@@ -2729,7 +2729,7 @@ type
 ///////////////////////////////////////////////////////////////////////////////
   IWMProfile         = interface;
   IWMInputMediaProps = interface;
-  
+
   IWMWriter = interface(IUnknown)
     ['{96406BD4-2B2B-11d3-B36B-00C04F6108FF}']
     // This interface QI's for IWMHeaderInfo, and IWMWriterAdvanced.
@@ -2768,7 +2768,7 @@ type
     // Flush() will flush the writer, but leaves the writer prepared to run
     // again, when WriteSample() is called again.
     // Flush() also causes an updated header to be sent to the sink.
-    function Flush: HRESULT; stdcall;                                           // ok 
+    function Flush: HRESULT; stdcall;                                           // ok
   end;
 
   IWMInputMediaProps = interface(IWMMediaProps) // ok
@@ -2991,7 +2991,7 @@ type
 
  IWMStreamConfig    = interface;
  IWMMutualExclusion = interface;
- 
+
  IWMProfile = interface(IUnknown)
    ['{96406BDB-2B2B-11d3-B36B-00C04F6108FF}']
     // By default, when the user creates a profile, it will use the latest

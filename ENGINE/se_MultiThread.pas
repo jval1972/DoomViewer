@@ -116,7 +116,7 @@ function MT_KillTimer(const id: integer): boolean;
 
 const
   MT_INFINITE = MAXINT;
-  
+
 implementation
 
 uses

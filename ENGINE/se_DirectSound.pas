@@ -924,11 +924,11 @@ const
   DSFX_I3DL2REVERB_REVERB_MIN                 = (-10000);
   DSFX_I3DL2REVERB_REVERB_MAX                 = 2000;
   DSFX_I3DL2REVERB_REVERB_DEFAULT             = (200);
-                                                    
+
   DSFX_I3DL2REVERB_REVERBDELAY_MIN            = 0.0;
   DSFX_I3DL2REVERB_REVERBDELAY_MAX            = 0.1;
   DSFX_I3DL2REVERB_REVERBDELAY_DEFAULT        = 0.011;
-                                                    
+
   DSFX_I3DL2REVERB_DIFFUSION_MIN              = 0.0;
   DSFX_I3DL2REVERB_DIFFUSION_MAX              = 100.0;
   DSFX_I3DL2REVERB_DIFFUSION_DEFAULT          = 100.0;

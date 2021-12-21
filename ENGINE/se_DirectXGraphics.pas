@@ -170,7 +170,7 @@ type
 
 type
   TD3DLightType = LongWord;
-  
+
 const
   D3DLIGHT_POINT          = 1;
   D3DLIGHT_SPOT           = 2;
@@ -218,7 +218,7 @@ const
 
 type
   TD3DFillMode = LongWord;
-  
+
 const
   D3DFILL_POINT               = 1;
   D3DFILL_WIREFRAME           = 2;
@@ -320,7 +320,7 @@ const
   D3DFOG_LINEAR               = 3;
   D3DFOG_FORCE_DWORD          = $7fffffff; (* force 32-bit size enum *)
 
-type  
+type
   TD3DZBufferType = LongWord;
 
 const
@@ -533,7 +533,7 @@ type
 
 const
 
-  // Control                              
+  // Control
   D3DTOP_DISABLE                   = 1;   // disables stage
   D3DTOP_SELECTARG1                = 2;   // the default
   D3DTOP_SELECTARG2                = 3;
@@ -776,7 +776,7 @@ type
   TD3DVSD_TokenType = LongWord;
 
 const
-                                         
+
   D3DVSD_TOKEN_NOP         = 0;          // NOP or extension
   D3DVSD_TOKEN_STREAM      = 1;          // stream selector
   D3DVSD_TOKEN_STREAMDATA  = 2;          // stream data definition (map to vertex input memory)
@@ -785,7 +785,7 @@ const
   D3DVSD_TOKEN_EXT         = 5;          // extension
   D3DVSD_TOKEN_END         = 7;          // end-of-array (requires all DWORD bits to be 1)
   D3DVSD_FORCE_DWORD       = $7fffffff;  // force 32-bit size enum
-  
+
 
   D3DVSD_TOKENTYPESHIFT   = 29;
   D3DVSD_TOKENTYPEMASK    = 7 shl D3DVSD_TOKENTYPESHIFT;
@@ -866,7 +866,7 @@ const
 // _VertexRegisterOut [0..15] address of vertex register to output the normal to
 //
   function D3DVSD_TESSNORMAL( _VertexRegisterIn, _VertexRegisterOut : LongWord) : LongWord;
-  
+
 // enable tessellator generated surface parameters
 //
 // _VertexRegister [0..15] address of vertex register to output parameters
@@ -923,7 +923,7 @@ const
 
 type
   TD3DShader_Instruction_Opcode_Type = LongWord;
-  TD3DShaderInstructionOpcodeType = LongWord;  
+  TD3DShaderInstructionOpcodeType = LongWord;
 
 const
   D3DSIO_NOP          = 0;      // PS/VS
@@ -1000,7 +1000,7 @@ const
 
 type
   TD3DShader_Param_DSTMod_Type = LongWord;
-  TD3DShaderParamDSTModType = LongWord;  
+  TD3DShaderParamDSTModType = LongWord;
 
 const
   D3DSPDM_NONE        = 0 shl D3DSP_DSTMOD_SHIFT; // nop
@@ -1048,13 +1048,13 @@ const
 
 type
   TD3DVS_AddressMode_Type = LongWord;
-  TD3DVSAddressModeType = LongWord;  
+  TD3DVSAddressModeType = LongWord;
 
 const
   D3DVS_ADDRMODE_ABSOLUTE    = 0 shl D3DVS_ADDRESSMODE_SHIFT;
   D3DVS_ADDRMODE_RELATIVE    = 1 shl D3DVS_ADDRESSMODE_SHIFT;  // Relative to register A0
   D3DVS_ADDRMODE_FORCE_DWORD = $7fffffff;                      // force 32-bit size enum
-                                                               
+
 // Source operand swizzle definitions
 //
   D3DVS_SWIZZLE_SHIFT     = 16;
@@ -1373,7 +1373,7 @@ type
   end;
 
   PD3DDeviceCreationParameters = ^TD3DDeviceCreationParameters;
-  TD3DDeviceCreationParameters = TD3DDevice_Creation_Parameters; 
+  TD3DDeviceCreationParameters = TD3DDevice_Creation_Parameters;
 
 (* SwapEffects *)
 type
@@ -1629,7 +1629,7 @@ type
   PD3DRectPatchInfo = ^TD3DRectPatchInfo;
   TD3DRectPatchInfo = TD3DRectPatch_Info;
 
-  
+
   PD3DTriPatch_Info = ^TD3DTriPatch_Info;
   TD3DTriPatch_Info = packed record
     StartVertexOffset : Cardinal;
@@ -1647,7 +1647,7 @@ const
   MAX_DEVICE_IDENTIFIER_STRING = 512;
 
 type
-  PD3DAdapter_Identifier8 = ^TD3DAdapter_Identifier8; 
+  PD3DAdapter_Identifier8 = ^TD3DAdapter_Identifier8;
   TD3DAdapter_Identifier8 = packed record
     Driver      : array [0..MAX_DEVICE_IDENTIFIER_STRING-1] of Char;
     Description : array [0..MAX_DEVICE_IDENTIFIER_STRING-1] of Char;
@@ -1694,7 +1694,7 @@ type
 *)
 type
   TD3DDebugMonitorTokens = LongWord;
-  
+
 const
     D3DDMT_ENABLE          = 0;    // enable debug monitor
     D3DDMT_DISABLE         = 1;    // disable debug monitor
@@ -1831,7 +1831,7 @@ const
 
 //
 // DevCaps
-//                                   
+//
   D3DDEVCAPS_EXECUTESYSTEMMEMORY     = $00000010; (* Device can use execute buffers from system memory *)
   D3DDEVCAPS_EXECUTEVIDEOMEMORY      = $00000020; (* Device can use execute buffers from video memory *)
   D3DDEVCAPS_TLVERTEXSYSTEMMEMORY    = $00000040; (* Device can use TL buffers from system memory *)
@@ -1855,7 +1855,7 @@ const
 
 //
 // PrimitiveMiscCaps
-//                                   
+//
   D3DPMISCCAPS_MASKZ                 = $00000002;
   D3DPMISCCAPS_LINEPATTERNREP        = $00000004;
   D3DPMISCCAPS_CULLNONE              = $00000010;
@@ -1878,7 +1878,7 @@ const
 
 //
 // RasterCaps
-//                                      
+//
   D3DPRASTERCAPS_DITHER                 = $00000001;
   D3DPRASTERCAPS_PAT                    = $00000008;
   D3DPRASTERCAPS_ZTEST                  = $00000010;
@@ -1935,7 +1935,7 @@ const
 
 //
 // TextureCaps
-//                                         
+//
   D3DPTEXTURECAPS_PERSPECTIVE              = $00000001; (* Perspective-correct texturing is supported *)
   D3DPTEXTURECAPS_POW2                     = $00000002; (* Power-of-2 texture dimensions are required - applies to non-Cube/Volume textures only. *)
   D3DPTEXTURECAPS_ALPHA                    = $00000004; (* Alpha in texture pixels is supported *)

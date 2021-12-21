@@ -29,7 +29,7 @@ type
     function GetBufferCount: Integer;
     function GetIDSound: IDirectSound;
     function GetISound: IDirectSound;
-  protected          
+  protected
     procedure CheckBuffer(Buffer: TDirectSoundBuffer);
     procedure DoRestoreBuffer; virtual;
   public
@@ -169,7 +169,7 @@ type
     property Volume: Integer read GetVolume write SetVolume;
     property WaveStream: TCustomWaveStream read FWaveStream write SetWaveStream;
   end;
-   
+
   {  TAudioFileStream  }
 
   TAudioFileStream = class(TAudioStream)
@@ -717,7 +717,7 @@ begin
 end;
 
 function TDirectSoundBuffer.GetPosition: Longint;
-var                                     
+var
   dwCurrentWriteCursor: Longint;
 begin
   IBuffer.GetCurrentPosition(DWORD(Result), DWORD(dwCurrentWriteCursor));
@@ -778,7 +778,7 @@ begin
 end;
 
 procedure TDirectSoundBuffer.LoadFromStream(Stream: TStream);
-var  
+var
   Wave: TWave;
 begin
   Wave := TWave.Create;
@@ -848,7 +848,7 @@ begin
     begin
       GetMem(FFormat, FFormatSize);
       IBuffer.GetFormat(FFormat^, FFormatSize, PDWORD(nil)^);
-    end;             
+    end;
   end;
 end;
 
@@ -877,7 +877,7 @@ begin
     begin
       GetMem(FFormat, FFormatSize);
       IBuffer.GetFormat(FFormat^, FFormatSize, PDWORD(nil)^);
-    end;                 
+    end;
   end;
 end;
 
@@ -897,7 +897,7 @@ var
 begin
   {  IDirectSoundBuffer made.  }
   FillChar(BufferDesc, SizeOf(BufferDesc), 0);
- 
+
   with BufferDesc do
   begin
     dwSize := SizeOf(TDSBufferDesc);
@@ -1138,19 +1138,19 @@ var
   AVolume: Integer;
 begin
   APlaying := Playing;
-     
+
   APosition := Position;
   AFrequency := Frequency;
   APan := Pan;
   AVolume := Volume;
-                        
+
   SetWaveStream(WaveStream);
 
   Position := APosition;
   Frequency := AFrequency;
   Pan := APan;
   Volume := AVolume;
-                  
+
   if APlaying then Play;
 end;
 
@@ -2233,7 +2233,7 @@ begin
       Restore;
   end else
     inherited Assign(Source);
-end;                         
+end;
 
 function TWaveCollectionItem.GetBuffer: TDirectSoundBuffer;
 begin
@@ -2301,7 +2301,7 @@ begin
         NewBuffer := FBufferList[i];
         Break;
       end;
-                 
+
     if NewBuffer=nil then
     begin
       if FMaxPlayingCount=0 then

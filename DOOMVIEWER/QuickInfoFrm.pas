@@ -62,7 +62,7 @@ implementation
 
 uses
   Shellapi, dv_globals;
-  
+
 procedure TQuickInfoForm.Label2Click(Sender: TObject);
 begin
   ShellExecute(

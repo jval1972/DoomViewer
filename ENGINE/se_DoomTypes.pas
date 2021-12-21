@@ -61,7 +61,7 @@ type
     1: (
         dimentions: integer;
         offsets: integer;
-       );     
+       );
   end;
 
 // Ο τύπος του αρχείου WAD:
@@ -101,7 +101,7 @@ type
           xpos_ypos: integer;  // x + y position
           angle_type: integer;  // facing angle + thing type
           when2: SmallInt;  // appears when?
-         ); 
+         );
   end;
   PDoomThings = ^TDoomThings;
   TDoomThings = array[0..$FFFE] of TDoomThing;
@@ -194,7 +194,7 @@ const // Linedefs constants
 // Set if already seen, thus drawn in automap.
   ML_MAPPED = 256;
 
-type  
+type
   PHexenLineDef = ^THexenLineDef;
   THexenLineDef = packed record
     case integer of
@@ -244,7 +244,7 @@ type
          );
       1: (
           x_y: integer;
-         ); 
+         );
   end;
   PDoomVertexes = ^TDoomVertexes;
   TDoomVertexes = array[0..$FFFE] of TDoomVertex;
@@ -271,7 +271,7 @@ type
           check5: integer;
           check6: smallint;
           foo1: integer
-         ); 
+         );
   end;
   PDoomSectors = ^TDoomSectors;
   TDoomSectors = array[0..$FFFE] of TDoomSector;
@@ -324,4 +324,4 @@ type
 implementation
 
 end.
- 
+

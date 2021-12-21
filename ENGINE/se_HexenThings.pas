@@ -4071,7 +4071,7 @@ procedure QuickSortmobjinfo;
     T: mobjinfo_t;
   begin
     I := L;
-    repeat   
+    repeat
       J := R;
       P := mobjinfo[(I + J) shr 1].doomednum;
       repeat
@@ -17823,7 +17823,7 @@ begin
       PositiveStart := i
     else
       break;
-  
+
   IsInitialized := true;
 end;
 

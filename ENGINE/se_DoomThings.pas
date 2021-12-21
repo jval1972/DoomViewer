@@ -1589,7 +1589,7 @@ implementation
 
 uses
   se_Main;
-  
+
 var
   PositiveStart: integer;
 
@@ -1627,7 +1627,7 @@ procedure QuickSortmobjinfo;
     T: mobjinfo_t;
   begin
     I := L;
-    repeat   
+    repeat
       J := R;
       P := mobjinfo[(I + J) shr 1].doomednum;
       repeat
